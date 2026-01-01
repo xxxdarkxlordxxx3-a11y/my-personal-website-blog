@@ -1,114 +1,188 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>موقعي الشخصي | Dark Lord</title>
+    <title>موقعي الشخصي | pl.m</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                red: '#EF4444',
-                green: '#10B981',
-                purple: '#9333EA',
-              }
-            },
-            animation: {
-              'blob': 'blob 10s infinite',
-              'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
-            }
-          }
-        }
-      }
-    </script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#EF4444',
+                            green: '#10B981',
+                            purple: '#9333EA',
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 10s infinite',
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-      body {
-        font-family: 'Cairo', sans-serif;
-        overflow-x: hidden;
-      }
-      ::-webkit-scrollbar { width: 8px; }
-      ::-webkit-scrollbar-track { background: #f1f1f1; }
-      ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
-      ::-webkit-scrollbar-thumb:hover { background: #555; }
-      @keyframes float {
-        0% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
-        100% { transform: translateY(0px); }
-      }
-      .animate-float { animation: float 6s ease-in-out infinite; }
-      @keyframes blob {
-        0% { transform: translate(0px, 0px) scale(1); }
-        33% { transform: translate(30px, -50px) scale(1.1); }
-        66% { transform: translate(-20px, 20px) scale(0.9); }
-        100% { transform: translate(0px, 0px) scale(1); }
-      }
-      .animation-delay-2000 { animation-delay: 2s; }
-      .animation-delay-4000 { animation-delay: 4s; }
-      @keyframes slideInRight {
-        from { opacity: 0; transform: translateX(50px); }
-        to { opacity: 1; transform: translateX(0); }
-      }
-      .animate-slide-in { animation: slideInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-      @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(30px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-      .glass-nav {
-        background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-      }
-      .btn-ios {
-        background: rgba(255, 255, 255, 0.25);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.4);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        color: #1e293b;
-        transition: all 0.3s ease;
-      }
-      .btn-ios:hover {
-        background: rgba(255, 255, 255, 0.5);
-        transform: translateY(-2px);
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-        border-color: rgba(255, 255, 255, 0.8);
-      }
-      .btn-ios-dark {
-        background: rgba(15, 23, 42, 0.75);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-        color: white;
-        transition: all 0.3s ease;
-      }
-      .btn-ios-dark:hover {
-        background: rgba(15, 23, 42, 0.9);
-        transform: translateY(-2px);
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-        border-color: rgba(255, 255, 255, 0.2);
-      }
-      .btn-ios-gradient {
-        background: linear-gradient(135deg, rgba(239, 68, 68, 0.8), rgba(147, 51, 234, 0.8));
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        color: white;
-        transition: all 0.3s ease;
-      }
-      .btn-ios-gradient:hover {
-        opacity: 0.9;
-        transform: translateY(-2px);
-        box-shadow: 0 10px 20px rgba(147, 51, 234, 0.3);
-      }
+        body { font-family: 'Cairo', sans-serif; overflow-x: hidden; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        @keyframes blob { 0%, 100% { transform: translate(0px, 0px) scale(1); } 33% { transform: translate(30px, -50px) scale(1.1); } 66% { transform: translate(-20px, 20px) scale(0.9); } }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-fade-in-up { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .btn-ios-dark { background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); color: white; transition: all 0.3s ease; }
+        .btn-ios-dark:hover { background: rgba(15, 23, 42, 0.9); transform: translateY(-2px); }
+        .btn-ios { background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.4); color: #1e293b; transition: all 0.3s ease; }
+        .btn-ios:hover { background: rgba(255, 255, 255, 0.5); transform: translateY(-2px); }
     </style>
-  </head>
-  <body class="bg-gradient-to-br from-emerald-50 via-purple-50 to-red-50 min-h-screen text-slate-900 selection:bg-brand-red selection:text-white">
-    <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
-  </body>
+</head>
+<body class="bg-gradient-to-br from-emerald-50 via-purple-50 to-red-50 min-h-screen text-slate-900 selection:bg-brand-red selection:text-white">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-14">
+                <a href="#" class="text-2xl font-black tracking-tighter flex items-center gap-1 group select-none cursor-pointer">
+                    <span class="bg-gradient-to-r from-brand-green via-brand-purple to-brand-red text-transparent bg-clip-text group-hover:scale-105 transition-transform">pl.m</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-2 space-x-reverse">
+                    <a href="#" class="text-brand-red font-bold bg-red-50 px-3 py-1 rounded-lg">الرئيسية</a>
+                    <a href="#" class="text-slate-600 hover:text-brand-red px-3 py-1 font-medium transition">الأعمال</a>
+                    <a href="#" class="text-slate-600 hover:text-brand-red px-3 py-1 font-medium transition">المدونة</a>
+                    <div class="flex items-center gap-3 mr-4">
+                        <a href="#" class="text-slate-600 hover:text-brand-red font-bold text-sm px-4">تسجيل دخول</a>
+                        <a href="#" class="btn-ios-dark px-5 py-2 rounded-full font-bold text-sm">انضم لينا</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center pt-16">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-brand-green rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
+        <div class="absolute top-40 right-10 w-72 h-72 bg-brand-red rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-32 left-1/2 w-72 h-72 bg-brand-purple rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-4000"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-right order-2 lg:order-1 space-y-8">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 tracking-tight animate-fade-in-up leading-tight">
+                        <span class="relative inline-block ml-4 group cursor-default">مرحباً<span class="absolute bottom-[15%] left-[33%] text-[6px] md:text-[8px] text-slate-800 font-black select-none pointer-events-none tracking-tight z-10">حمزة</span></span>، أنا <span class="relative inline-block mr-4"><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-green via-brand-purple to-brand-red">pl.m</span></span>
+                    </h1>
+                    <div class="space-y-6">
+                        <p class="text-xl md:text-3xl font-bold text-slate-700 animate-fade-in-up leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            مطلع ومتمكن جداً من <span class="text-brand-green">تعديل الصور</span> ومتحمس <span class="text-brand-purple">للتكنولوجيا</span>.
+                        </p>
+                        <div class="animate-fade-in-up">
+                           <span class="text-lg md:text-xl font-bold text-slate-500 inline-block transform -rotate-2 hover:rotate-0 transition-transform duration-300 origin-bottom-right">مواليد <span class="text-brand-red mr-1">2012/9/1</span></span>
+                        </div>
+                    </div>
+                    <div class="animate-fade-in-up">
+                        <p class="text-lg text-slate-500 font-medium leading-relaxed bg-slate-50/50 inline-block px-6 py-3 rounded-2xl border border-slate-100 backdrop-blur-sm">مش هقولك اسمي، بس هتعرفه كل ما تقعد في الموقع أكتر.</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-fade-in-up pt-4">
+                         <a href="#" class="w-full sm:w-auto px-8 py-4 btn-ios-dark rounded-full font-bold flex items-center justify-center gap-2 group">اقرأ المقالات</a>
+                         <a href="#" class="w-full sm:w-auto px-8 py-4 btn-ios rounded-full font-bold flex items-center justify-center">انضم للمجتمع</a>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2 flex justify-center lg:justify-end animate-fade-in-up relative">
+                   <div class="relative w-72 h-72 md:w-96 md:h-96 lg:w-[500px] lg:h-[550px]">
+                      <div class="absolute top-10 -right-10 w-full h-full border-2 border-brand-green/20 rounded-[3rem] transform rotate-6 z-0"></div>
+                      <div class="absolute -bottom-5 -left-5 w-2/3 h-2/3 bg-gradient-to-tr from-brand-purple/10 to-brand-red/10 rounded-full blur-2xl z-0"></div>
+                      <div class="relative z-10 w-full h-full rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transform hover:scale-[1.02] transition duration-700 ease-out group">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-60 z-10"></div>
+                        <img src="./profile.jpg" alt="Profile Portrait" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-700" />
+                      </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                 <div class="order-2 md:order-1 relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-green via-brand-purple to-brand-red rounded-3xl transform rotate-3 opacity-10"></div>
+                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1000&auto=format&fit=crop" alt="Books" class="rounded-3xl shadow-2xl relative z-10 w-full object-cover h-[500px]" />
+                 </div>
+                 <div class="order-1 md:order-2 space-y-8">
+                   <h2 class="text-4xl md:text-5xl font-bold text-slate-900">العقل <span class="text-brand-purple">المبدع</span> بيحتاج غذاء.</h2>
+                   <p class="text-lg text-slate-600 leading-relaxed">القراءة هي الوقود اللي بيحرك شغفي. دي المواضيع اللي بتشغل تفكيري وبحب أكتب عنها باستمرار:</p>
+                   <div class="space-y-6">
+                     <div class="flex gap-4 items-start group">
+                       <div class="bg-emerald-50 p-3 rounded-2xl group-hover:bg-emerald-100 transition"><div class="w-6 h-6 text-brand-green font-bold">↑</div></div>
+                       <div><h3 class="text-xl font-bold text-slate-900 mb-2">اقتصاد واستثمار</h3><p class="text-slate-500">لغة المال والأعمال، إزاي نبني ثروة ونفهم السوق.</p></div>
+                     </div>
+                     <div class="flex gap-4 items-start group">
+                       <div class="bg-purple-50 p-3 rounded-2xl group-hover:bg-purple-100 transition"><div class="w-6 h-6 text-brand-purple font-bold">🧠</div></div>
+                       <div><h3 class="text-xl font-bold text-slate-900 mb-2">علم النفس</h3><p class="text-slate-500">فهم النفس البشرية هو مفتاح التعامل مع كل حاجة في الحياة.</p></div>
+                     </div>
+                     <div class="flex gap-4 items-start group">
+                       <div class="bg-red-50 p-3 rounded-2xl group-hover:bg-red-100 transition"><div class="w-6 h-6 text-brand-red font-bold">💡</div></div>
+                       <div><h3 class="text-xl font-bold text-slate-900 mb-2">تطوير الذات</h3><p class="text-slate-500">محاولات مستمرة عشان نكون أفضل، سواء في الشغل أو الحياة.</p></div>
+                     </div>
+                   </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto">
+        <div class="py-24 px-6 bg-slate-50 border-t border-slate-200">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <h3 class="text-sm font-bold text-slate-900 mb-6 uppercase tracking-wider">سوشيال ميديا</h3>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                        <li><a href="https://www.facebook.com/hamzaDXE" target="_blank" class="hover:text-brand-red transition">فيسبوك</a></li>
+                        <li><a href="https://www.instagram.com/h7amza318/" target="_blank" class="hover:text-brand-purple transition">إنستجرام</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-slate-900 mb-6 uppercase tracking-wider">تواصل مباشر</h3>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                        <li><a href="mailto:contact@example.com" class="hover:text-brand-red transition">الإيميل الرسمي</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-slate-900 mb-6 uppercase tracking-wider">تصفح</h3>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                        <li><a href="#" class="hover:text-brand-green transition">الرئيسية</a></li>
+                        <li><a href="#" class="hover:text-brand-green transition">المدونة</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg-slate-900 border-t border-slate-800 text-slate-400 py-10 text-center">
+            <p>© 2026 جميع الحقوق محفوظة لـ <span class="font-bold mx-1 text-slate-200">pl.m</span></p>
+            <p class="text-xs mt-2 opacity-50">معمولة بمزاج وكود نضيف</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('glass-nav', 'shadow-sm', 'py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.remove('glass-nav', 'shadow-sm', 'py-2');
+                nav.classList.add('py-4');
+            }
+        });
+    </script>
+</body>
 </html>
