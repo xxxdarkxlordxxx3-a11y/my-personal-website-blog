@@ -85,11 +85,10 @@ export const Home: React.FC = () => {
                         تم تحديث الاسم ليطابق ملف المستخدم: profile.jpg
                     */}
                     <img 
-                      src="./profile.jpg" 
-                      onError={(e) => {e.currentTarget.src = "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop"}}
-                      alt="Profile Portrait" 
-                      className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-700"
-                    />
+	                      src="/profile.jpg" 
+	                      alt="Profile Portrait" 
+	                      className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-700"
+	                    />
                   </div>
                </div>
             </div>
